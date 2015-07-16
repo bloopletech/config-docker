@@ -16,3 +16,6 @@ RUN apt-get install -y curl unzip
 RUN curl -O -L https://dl.bintray.com/mitchellh/packer/packer_0.8.1_linux_amd64.zip && unzip packer_0.8.1_linux_amd64.zip -d /usr/bin/ && rm packer_0.8.1_linux_amd64.zip
 RUN curl -O -L https://dl.bintray.com/mitchellh/terraform/terraform_0.6.0_linux_amd64.zip && unzip terraform_0.6.0_linux_amd64.zip -d /usr/bin/ && rm terraform_0.6.0_linux_amd64.zip
 RUN su ubuntu -c "echo 'export TERM=xterm-256color' >> ~/.bashrc"
+RUN add-apt-repository --yes ppa:brightbox/ruby-ng
+RUN apt-get update
+RUN apt-get install -y ruby
