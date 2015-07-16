@@ -18,4 +18,5 @@ RUN curl -O -L https://dl.bintray.com/mitchellh/terraform/terraform_0.6.0_linux_
 RUN su ubuntu -c "echo 'export TERM=xterm-256color' >> ~/.bashrc"
 RUN add-apt-repository --yes ppa:brightbox/ruby-ng
 RUN apt-get update
-RUN apt-get install -y ruby
+RUN apt-get install -y ruby2.2 ruby2.2-dev build-essential libxml2-dev zlib1g-dev libpq-dev libsqlite3-dev
+RUN gem install bundler
