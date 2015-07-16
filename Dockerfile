@@ -20,3 +20,4 @@ RUN add-apt-repository --yes ppa:brightbox/ruby-ng
 RUN apt-get update
 RUN apt-get install -y ruby2.2 ruby2.2-dev build-essential libxml2-dev zlib1g-dev libpq-dev libsqlite3-dev
 RUN gem install bundler
+RUN (curl -sL https://deb.nodesource.com/setup_0.12 | bash -) && apt-get install -y nodejs
